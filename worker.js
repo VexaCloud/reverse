@@ -1,7 +1,8 @@
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
-    const TARGET = "https://example.com";
+    //if you are forking this repo and want to change the link, change the link below this line!
+    const TARGET = "https://gym.global.ssl.fastly.net/";
     const upstream = new URL(TARGET + url.pathname + url.search);
     const newRequest = new Request(upstream, {
       method: request.method,
